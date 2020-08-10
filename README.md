@@ -28,7 +28,7 @@ Balls to Bins app developed in Laravel 7 with bootstrap 4
 
 ## Setup
 
-1. Setup (install/create) PHP server & Database ([XAMPP])(https://www.apachefriends.org/ro/index.html) and create new database eg. "marbles".
+1. Setup (install/create) PHP server & Database, like [XAMPP](https://www.apachefriends.org/ro/index.html) and create new database eg. "marbles".
 2. Install [Composer](https://getcomposer.org/doc/00-intro.md)
 3. Install [npm](https://docs.npmjs.com/getting-started/installing-node).
 4. Install git. Get this project from Github (git clone).
