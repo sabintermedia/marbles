@@ -24,9 +24,9 @@ Balls to Bins app developed in Laravel 7 with bootstrap 4
 - check if ball can be placed in the box depending on colors in the box <=2, if not, go to next box
 - do this until all balls are distributed or infinite loop occurs
 
-<p><img src="https://www.sabintermedia.ro/wp-content/uploads/2020/08/marbles-preview.png" alt="sshot_shop" border="0"></p>
+<p><img src="https://www.sabintermedia.ro/wp-content/uploads/2020/08/marbles-preview.png" alt="screenshot_marbles_app" border="0"></p>
 
-1. Setup (install/create) Database and PHP server.
+1. Setup (install/create) PHP server, Database and create new database eg. "marbles".
 2. Install [Composer](https://getcomposer.org/doc/00-intro.md)
 3. Install [npm](https://docs.npmjs.com/getting-started/installing-node).
 4. Install git. Get this project from Github (git clone).
@@ -34,8 +34,9 @@ Balls to Bins app developed in Laravel 7 with bootstrap 4
 6. Run "composer update".
 7. Run "npm install", then "npm run dev".
 8. Run "php artisan key:generate". It will add application key to the .env file.
-9. Run "php artisan migrate" [Laravel Migrations](https://laravel.com/docs/5.5/migrations).
-10. Important! It's the correct way to seeding: "php artisan db:seed --class=DatabaseSeeder" [Laravel Seeding](https://laravel.com/docs/5.5/seeding).
-11. Setup "Document root" for your project on server like ".../my_example_shop/public".
+9. Run "php artisan migrate" [Laravel Migrations](https://laravel.com/docs/7.x/migrations).
+10. Important! Generate random colors by seeding: "php artisan db:seed --class=DatabaseSeeder" [Laravel Seeding](https://laravel.com/docs/7.x/seeding).
+11. Run "php artisan serve" to start app locally.
 
+For any questions or suggestions
 Sebastian Blajevici: sabintermedia@gmail.com
