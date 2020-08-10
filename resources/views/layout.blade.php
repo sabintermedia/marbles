@@ -45,7 +45,7 @@
               <div class="inner">
                 <p>Developed by Sebastian Blajevici @ <a href="https://www.sabintermedia.ro"> SAB Intermedia</a><br/>
                   for <a href="https://www.bit-soft.ro/">BITSOFT</a><br/>
-                  with <a href="https://laravel.com/docs/7.x/releases">Laravel 7</a>, <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://www.apachefriends.org/ro/index.html">XAMP</a><br/>
+                  with <a href="https://laravel.com/docs/7.x/releases">Laravel 7</a>, <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://www.apachefriends.org/ro/index.html">XAMPP</a><br/>
                   and cover template by <a href="https://twitter.com/mdo">@mdo</a>
 
                 </p>
