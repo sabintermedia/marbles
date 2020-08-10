@@ -2,6 +2,8 @@
 
 Balls to Bins app developed in Laravel 7 with bootstrap 4
 
+<p><img src="https://www.sabintermedia.ro/wp-content/uploads/2020/08/marbles-preview.png" alt="screenshot_marbles_app" border="0"></p>
+
 ## Problem
 
 - Given n<sup>2</sup> balls of n colors, having a random distribution and n boxes, find a method of filling each box with n balls of maximum 2 different colors.
@@ -24,7 +26,7 @@ Balls to Bins app developed in Laravel 7 with bootstrap 4
 - check if ball can be placed in the box depending on colors in the box <=2, if not, go to next box
 - do this until all balls are distributed or infinite loop occurs
 
-<p><img src="https://www.sabintermedia.ro/wp-content/uploads/2020/08/marbles-preview.png" alt="screenshot_marbles_app" border="0"></p>
+## Setup
 
 1. Setup (install/create) PHP server, Database and create new database eg. "marbles".
 2. Install [Composer](https://getcomposer.org/doc/00-intro.md)
