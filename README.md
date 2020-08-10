@@ -1,6 +1,17 @@
 # marbles
 
-balls to bins app in laravel 7 with bootstrap 4
+Balls to Bins app developed in Laravel 7 with bootstrap 4
+
+## Problem
+
+- Given n2 balls of n colors, having a random distribution and n boxes, find a method of filling each box with n balls of maximum 2 different colors.
+
+- For solving this problem, the following are required:
+
+1. input for the number of balls (n)
+2. output of number of balls of each color in each box
+3. storing history of inputs
+4. visualizing results from history
 
 ## Algorythm
 
