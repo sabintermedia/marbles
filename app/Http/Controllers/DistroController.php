@@ -2,26 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Distro;
 use Illuminate\Http\Request;
-use App\Ball;
 
-class BoxController extends Controller
+class DistroController extends Controller
 {
-
-
-    public function __construct()
-    {
-
-    }
-
-    /**
-     * Push ball to box
-     */
-    public function pushBall($ball)
-    {
-        array_push($this->ballsInBox,$ball);
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -56,10 +41,10 @@ class BoxController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Distro  $distro
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Distro $distro)
     {
         //
     }
@@ -67,10 +52,10 @@ class BoxController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Distro  $distro
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Distro $distro)
     {
         //
     }
@@ -79,10 +64,10 @@ class BoxController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Distro  $distro
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Distro $distro)
     {
         //
     }
@@ -90,10 +75,10 @@ class BoxController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Distro  $distro
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Distro $distro)
     {
         //
     }

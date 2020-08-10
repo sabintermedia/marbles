@@ -1,7 +1,32 @@
-<div class="container">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a href="/play" class="nav-link">Play</a>
-    <a href="/setting" class="nav-link">Settings</a>
-    <a href="/history" class="nav-link">History</a>
+<div class="container float-left md-12 mb-5">
+  <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+    <div class="sidebar-sticky">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" href="/">
+            <span data-feather="home"></span>
+            Dashboard <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/play">
+            <span data-feather="file"></span>
+            Play
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/setting">
+            <span data-feather="shopping-cart"></span>
+            Settings
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/history">
+            <span data-feather="users"></span>
+            History
+          </a>
+        </li>
+      </ul>
+    </div>
   </nav>
 </div>

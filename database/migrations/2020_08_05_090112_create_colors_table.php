@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddForeignKey extends Migration
+class CreateColorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class AddForeignKey extends Migration
      */
     public function up()
     {
-        // Schema::table('balls', function (Blueprint $table) {
-        //     $table->index('ball_id');
-        //     $table->foreign('id')->references('id')->on('boxes');
-        // });
+        Schema::create('colors', function (Blueprint $table) {
+            $table->id();
+            $table->string('color');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -26,8 +27,6 @@ class AddForeignKey extends Migration
      */
     public function down()
     {
-        Schema::table('balls', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('colors');
     }
 }

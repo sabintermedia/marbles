@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 
 class BallController extends Controller
 {
+
+    public function __construct()
+    {
+
+    }
+
     /**
      * Display a listing of the resource.
      *

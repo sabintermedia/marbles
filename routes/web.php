@@ -17,17 +17,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('setting', 'SettingController@index');
-
-Route::get('/history', function () {
-    return view('history');
+Route::get('/play', function () {
+    return view('play');
 });
 
-
-Route::get('/play', 'PlayController@play');
-//Route::get('/setting', 'SettingController');
+Route::post('/updategame/{id}', 'SettingController@updategame')->name('updategame');
+Route::get('/settings', 'SettingController@index');
+Route::get('/history', 'InputController@index');
+Route::get('/playgame', 'PlayController@play')->name('playgame');
+Route::get('/play', 'PlayController@updatePlay');
+Route::get('/distribute', 'PlayController@distribute')->name('distribute');
 
 Route::resource('/ball', 'BallController');
 Route::resource('/box', 'BoxController');
 Route::resource('/input', 'InputController');
 Route::resource('/setting', 'SettingController');
+Route::resource('/color', 'ColorController');

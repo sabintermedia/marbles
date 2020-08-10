@@ -8,6 +8,13 @@ use Illuminate\Http\Response;
 
 class SettingController extends Controller
 {
+
+    public $setting;
+
+    public function __construct()
+    {
+       $this->setting = new Setting;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -16,10 +23,7 @@ class SettingController extends Controller
     public function index()
     {
       $data = Setting::all();
-      //$setting ="bogus";
-      //$resp = Setting::all()->jsonSerialize();
-      return view('setting', compact('data'));
-      //return response(Setting::all()->jsonSerialize(), Response::HTTP_OK);
+      return view('settings', compact('data'));
     }
 
     /**
@@ -51,7 +55,7 @@ class SettingController extends Controller
      */
     public function show(Setting $setting)
     {
-        $settingID = $settin->id;
+        $settingID = $setting->id;
         return view('showSetting');
     }
 
@@ -64,7 +68,7 @@ class SettingController extends Controller
     public function edit(Setting $setting)
     {
       $data = Setting::findOrFail($setting->id);
-      return view('editsetting', compact('data'));
+      return view('editsettings', compact('data'));
     }
 
     /**
@@ -77,16 +81,30 @@ class SettingController extends Controller
     public function update(Request $request, Setting $setting)
     {
       $id = $setting->id;
-
-      //$setting = Setting::findOrFail($setting->id);
       $data = $request->validate([
-        'content' => 'numeric'
+        'content' => 'numeric|max:10'
       ]);
 
       Setting::whereId($id)->update($data);
       return redirect('/setting')->with('success','Setting saved');
-      //return response(null, Response::HTTP_OK);
+    }
 
+    /**
+     * Update n in game view.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  array  $setting
+     * @return \Illuminate\Http\Response
+     */
+    public function updategame(Request $request, $setting)
+    {
+      $set = collect($setting);
+      $data = $request->validate([
+        'content' => 'numeric|max:10'
+      ]);
+
+      Setting::whereId(1)->update($data);
+      return redirect('/playgame')->with('success','Setting saved');
     }
 
     /**

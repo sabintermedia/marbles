@@ -1,13 +1,11 @@
 @extends ('layout')
-@section ('title','Game settings')
-@section ('setting')
-<div class="card mt-10">
-  <div class="card-header">
-      Settings
-  </div>
-  <div class="card-body">
-    <table class=border="table table-hover">
-      <thead>
+@section ('title','Settings')
+@section ('settings')
+<div class="flex-top position-ref full-height">
+  <div class="masthead-brand h5">Settings</div>
+  <div class="lead">
+    <table class="table table-striped table-dark table-md-12">
+      <thead class="thead-dark">
           <tr>
             <td>ID</td>
             <td>Setting</td>
@@ -15,7 +13,7 @@
             <td>Action</td>
           </tr>
       </thead>
-      <tbody>
+      <tbody class="table-striped">
         @foreach($data as $setting)
         <tr>
           <td>{{ $setting->id }}</td>
@@ -25,7 +23,7 @@
         </tr>
         @endforeach
       <tbody>
-
+    </table>
   </div>
 </div>
 @endsection

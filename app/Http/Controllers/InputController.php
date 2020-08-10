@@ -14,7 +14,13 @@ class InputController extends Controller
      */
     public function index()
     {
-        //
+      $distros = array();
+      $inputs = Input::all();
+      foreach($inputs as $key => $input){
+        $distros[$key]['set'] = json_decode($input->set);
+        $distros[$key]['n'] = $input->number;
+      }
+      return view('history', compact('distros'));
     }
 
     /**
