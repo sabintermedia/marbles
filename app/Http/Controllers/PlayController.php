@@ -145,7 +145,6 @@ class PlayController extends Controller
       // all balls have been distributed
       }while($distributedBalls<($n*$n));
 
-      // Check if distribution failed
       if($s>500){
         // delete balls from working table
         Distro::truncate();return;
@@ -165,9 +164,24 @@ class PlayController extends Controller
 
     }
 
-
     /**
-     * Collection utility
+     * Update settings in play view
+     * @return \Illuminate\Http\Response
+     */
+    public function updatePlay(Request $request, Setting $setting)
+    {
+
+      $id = $setting->id;
+      $data = $request->validate([
+        'content' => 'numeric|max:10'
+      ]);
+
+      Setting::whereId($id)->update($data);
+      return redirect('/playgame')->with('success','Setting saved');
+
+    }
+    /**
+     * Collectrion utility
      * @return \Illuminate\Http\Response
      */
      function collect($value = null)
