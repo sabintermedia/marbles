@@ -40,5 +40,4 @@ Balls to Bins app developed in Laravel 7 with bootstrap 4
 10. Important! Generate random colors by seeding: "php artisan db:seed --class=DatabaseSeeder" [Laravel Seeding](https://laravel.com/docs/7.x/seeding).
 11. Run "php artisan serve" to start app locally.
 
-For any questions or suggestions
-Sebastian Blajevici: sabintermedia@gmail.com
+For any questions or suggestions contact sabintermedia@gmail.com
